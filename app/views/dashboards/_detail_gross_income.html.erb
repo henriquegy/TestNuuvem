@@ -1,0 +1,7 @@
+<% details.each do |gross_income| %>
+    <tr>
+        <th scope="row">-</th>
+        <td><%= gross_income[gross_income_type[:deliver_date]] %></td>
+        <td><%= gross_income[gross_income_type[:total_item_price]] %></td>
+    </tr>
+<% end %>

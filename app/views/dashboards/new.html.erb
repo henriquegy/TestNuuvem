@@ -1,0 +1,24 @@
+<div class="d-flex justify-content-center">
+    <div class="d-flex flex-column">
+        <p class="fs-1">Parse deliveries by file</p>
+
+        <%= form_for :parser, url: "/dashboards", multipart: true, method: :post do |form| %>
+            <div class="d-flex flex-column">
+                <div class="d-flex flex-row"> 
+                    <div class="p-2 flex-grow-1">
+                        <%= form.label :file_data, "Where is your file/data:" %>
+                    </div>
+                </div>
+
+                <div class="d-flex flex-row mb-5">                    
+                    <div class="p-2 flex-grow-1">
+                        <%= form.file_field :file_data %>
+                    </div>
+                </div>
+            </div>
+
+            <%= form.submit "Parse Data" %>
+            <%= link_to "Back", dashboards_path %>
+        <% end %>
+    </div>
+</div>

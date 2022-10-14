@@ -1,0 +1,13 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Sales date</th>
+      <th scope="col">Gross income</th>
+    </tr>
+  </thead>
+  <tbody>
+    <%= render partial: "detail_gross_income", locals: {details: details} %>
+    <%= render partial: "totalizer_gross_income", locals: {totalizer: totalizer}%>   
+  </tbody>
+</table>
